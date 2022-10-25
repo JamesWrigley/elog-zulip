@@ -265,7 +265,7 @@ class ElogDoc(Elog):
 
 class ElogProposal(Elog):
     def _new_posts(self):
-        log.info(f"[{type(self).__name__}] Checking for new posts")
+        log.info(f"[{type(self).__name__}] Checking for new posts in {self.url}")
 
         page = None if len(self.entry) > 0 else "page"
         entries = self.get_entries(page)
